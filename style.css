@@ -16,7 +16,7 @@ body,html{
     padding: 0;
 }
 body{
-    background-color: rgb(37, 37, 37);
+    background-color: #0E0E0E;
 }
 nav{
     position: fixed;
@@ -28,7 +28,7 @@ nav{
     justify-content: left;
     align-items: center;
     width: 100%;
-    background-color: #121212;
+    background-color: #12121281;
 }
 nav > div{
     margin-left: 0.5em;
@@ -52,14 +52,13 @@ nav > h2::after{
 main{
     display: flex;
     justify-content: center;
-    align-items: baseline;
     width: 100%;
     height: 100%;
 }
 main > div{
     position: absolute;
     width: 100%;
-    height: 50%;
+    height: 100%;
     padding: 0;
     margin: 0;
     display: flex;
@@ -68,9 +67,9 @@ main > div{
     flex-direction: column;
     filter: brightness(0.75);
     background-image: url(img/kaisa.jpg);
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 200Vh;
 }
 main > span{
     position: absolute;
@@ -81,14 +80,32 @@ main > span > h3, main > span > h1{
     font-weight: var(--regular);
 }
 main > span  > h1{
-    font-size: 2.5em;
+    font-size: 10em;
+    margin-bottom: 0;
 }
 main > span > h3{
-    font-size: 1.25em;
+    font-size: 5em;
+    font-weight: var(--light);
+    margin-top: 0;
 }
-@media only screen and (max-width: 650px){
-    main > div{
-        background-size: 200vw;
-        background-position: bottom;
-    }
+
+nav > div > a::before{
+    content: ' ';
+    z-index: 3;
+    position: absolute;
+    bottom: 10px;
+    height: 2px;
+    background-color: #AD0E97;
+    transition: all 300ms ease;
+    transform: scaleX(0);
+    transform-origin: center bottom;
+}
+nav > div > a:hover:before{
+    transform: scaleX(1);
+}
+.short::before{
+    width: 40px;
+}
+.long::before{
+    width: 65px;
 }
