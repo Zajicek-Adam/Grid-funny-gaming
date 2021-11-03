@@ -1,111 +1,241 @@
-:root{
-    font-family: 'Oswald';
-    --e-light: 200;
-    --light: 300;
-    --regular: 400;
-    --medium: 500;
-    --semi-bold: 600;
-    --bold: 700;
-    font-weight : var(--regular );
-    color: white;
+:root {
+  font-family: "Oswald";
+  --e-light: 200;
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  font-weight: var(--regular);
+  color: white;
 }
-body,html{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-color: #0E0E0E;
+body {
+  height: 200%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    background-color: #12121281;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  background-color: #121212;
 }
-nav > div{
-    margin-left: 0.5em;
+nav > div {
+  margin-left: 0.5em;
 }
-nav > div > a{
-    margin: 0 0.5em;
-    text-decoration: none;
-    font-size: 1.25em;
-    color: white;
+nav > div > a {
+  margin: 0 0.5em;
+  text-decoration: none;
+  font-size: 1.25em;
+  color: white;
 }
-nav > h2{
-    margin: 0.75em;
-    font-size: 1.5em;
-    font-weight : var(--medium);
+nav > h2 {
+  margin: 0.75em;
+  font-size: 1.5em;
+  font-weight: var(--medium);
 }
-nav > h2::after{
-    content: '|';
-    position: relative;
-    left: 17.5px;
+nav > h2::after {
+  content: "|";
+  position: relative;
+  left: 17.5px;
 }
-main{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
-main > div{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    filter: brightness(0.75);
-    background-image: url(img/kaisa.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 200Vh;
+main > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  filter: brightness(0.55);
+  background-image: url(img/kaisa.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-main > span{
-    position: absolute;
-    top: 17.5%;
-    text-align: center;
+main > span {
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  text-align: center;
 }
-main > span > h3, main > span > h1{
-    font-weight: var(--regular);
+main > span > h3,
+main > span > h1 {
+  font-weight: var(--regular);
+  text-transform: uppercase;
 }
-main > span  > h1{
-    font-size: 10em;
-    margin-bottom: 0;
+main > span > h1 {
+  color: #d4ccbd;
+  font-size: 10em;
+  margin-bottom: 0;
 }
-main > span > h3{
-    font-size: 5em;
-    font-weight: var(--light);
-    margin-top: 0;
+main > span > h3 {
+  font-size: 5em;
+  color: #d6c09a;
+  font-weight: var(--light);
+  margin-top: 0;
 }
 
-nav > div > a::before{
-    content: ' ';
-    z-index: 3;
-    position: absolute;
-    bottom: 10px;
-    height: 2px;
-    background-color: #AD0E97;
-    transition: all 300ms ease;
-    transform: scaleX(0);
-    transform-origin: center bottom;
+nav > div > a::before {
+  content: " ";
+  z-index: 3;
+  position: absolute;
+  bottom: 10px;
+  height: 2px;
+  background-color: #ad0e97;
+  transition: all 300ms ease;
+  transform: scaleX(0);
+  transform-origin: center bottom;
 }
-nav > div > a:hover:before{
-    transform: scaleX(1);
+nav > div > a:hover:before {
+  transform: scaleX(1);
 }
-.short::before{
-    width: 40px;
+.short::before {
+  width: 40px;
 }
-.long::before{
-    width: 65px;
+.long::before {
+  width: 65px;
+}
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section > div {
+  width: 50%;
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  box-shadow: 0px 0px 20px 5px black;
+}
+section > div > div {
+  text-align: center;
+  transition: all 600ms ease;
+  background-color: rgb(17, 17, 17);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section > div > div:hover {
+  transform: scale(1.1);
+  border: #ad0e97 2px solid;
+  z-index: 10;
+}
+button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.2em 0.25em;
+  transition: all 300ms ease-out;
+  border: 1px #ad0e97 solid;
+}
+button:hover {
+  padding: 0.75em;
+}
+button::before {
+  content: "⟶";
+  font-size: 1.5em;
+  opacity: 0;
+}
+button::after {
+  transition: all 300ms ease-out;
+  content: "⟶";
+  font-size: 1.5em;
+  color: #ad0e97;
+  opacity: 0;
+}
+button:hover:after {
+  opacity: 1;
+}
+cite,
+q,
+i {
+  font-style: normal;
+  font-size: 1.35em;
+}
+cite::before {
+  content: "~ ";
+}
+i {
+  color: #ad0e97;
+}
+#marksman {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+#marksman:hover {
+  transform: scale(1);
+  border: none;
+}
+#marksman > img {
+  height: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+#void > img {
+  height: 7em;
+}
+.c-5 {
+  grid-column: 5;
+}
+.r-1 {
+  grid-row-start: 1;
+}
+.r-2 {
+  grid-row-start: 2;
+}
+.r-3 {
+  grid-row-start: 3;
+}
+.r-4 {
+  grid-row-start: 4;
+}
+.r-span-2 {
+  grid-row-end: span 2;
+}
+.r-span-3 {
+  grid-row-end: span 3;
+}
+.c-span-3 {
+  grid-column: span 3;
+}
+.long-text {
+  font-size: 1em;
+  width: 600px;
+  text-align: justify;
 }
