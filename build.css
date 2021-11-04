@@ -1,0 +1,11 @@
+:root {
+    font-family: "Oswald";
+    --e-light: 200;
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
+    font-weight: var(--regular);
+    color: white;
+  }

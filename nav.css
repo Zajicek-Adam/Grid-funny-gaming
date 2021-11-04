@@ -1,0 +1,46 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    background-color: #121212;
+  }
+  nav > div {
+    margin-left: 0.5em;
+  }
+  nav > div > a {
+    margin: 0 0.5em;
+    text-decoration: none;
+    font-size: 1.25em;
+    color: white;
+  }
+  nav > h2 {
+    margin: 0.75em;
+    font-size: 1.5em;
+    font-weight: var(--medium);
+  }
+  nav > h2::after {
+    content: "|";
+    position: relative;
+    left: 17.5px;
+  }
+  
+nav > div > a::before {
+    content: " ";
+    z-index: 3;
+    position: absolute;
+    bottom: 10px;
+    height: 2px;
+    background-color: #ad0e97;
+    transition: all 300ms ease;
+    transform: scaleX(0);
+    transform-origin: center bottom;
+  }
+  nav > div > a:hover:before {
+    transform: scaleX(1);
+  }
