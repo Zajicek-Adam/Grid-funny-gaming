@@ -41,12 +41,14 @@ nav > div > a::before {
     transform: scaleX(0);
     transform-origin: center bottom;
   }
-  nav > div > a:hover:before {
-    transform: scaleX(1);
-  }
   .short::before {
     width: 40px;
   }
   .long::before {
     width: 65px;
+  }
+  @media not all and (hover: none){
+    nav > div > a:hover:before {
+      transform: scaleX(1);
+    }
   }

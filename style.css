@@ -98,11 +98,7 @@ section > div > div {
   justify-content: center;
   align-items: center;
 }
-section > div > div:hover {
-  transform: scale(1.1);
-  border: #ad0e97 2px solid;
-  z-index: 10;
-}
+
 button {
   all: unset;
   display: flex;
@@ -112,9 +108,7 @@ button {
   transition: all 300ms ease-out;
   border: 1px #ad0e97 solid;
 }
-button:hover {
-  padding: 0.75em;
-}
+
 button::before {
   content: "⟶";
   font-size: 1.5em;
@@ -127,9 +121,7 @@ button::after {
   color: #ad0e97;
   opacity: 0;
 }
-button:hover:after {
-  opacity: 1;
-}
+
 cite,
 q,
 i {
@@ -149,10 +141,7 @@ i {
   align-items: center;
   text-align: left;
 }
-#marksman:hover {
-  transform: scale(1);
-  border: none;
-}
+
 #marksman > img {
   height: 3em;
   padding-left: 1em;
@@ -273,4 +262,21 @@ i {
     section > div{
         width: 75%;
     }
+}
+@media not all and (hover: none){
+  section > div > div:hover {
+    transform: scale(1.1);
+    border: #ad0e97 2px solid;
+    z-index: 10;
+  }
+  button:hover {
+    padding: 0.75em;
+  }
+  button:hover:after {
+    opacity: 1;
+  }
+  #marksman:hover {
+    transform: scale(1);
+    border: none;
+  }
 }
