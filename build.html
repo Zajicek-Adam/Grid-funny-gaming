@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="nav.css" rel="stylesheet">
     <link href="build.css" rel="stylesheet">
     <title>Kai'Sa | Build</title>
@@ -41,6 +42,14 @@
             <img id="collector" src="img/The_Collector_item_HD.webp" alt="">
         </div>
     </section>
+    <script>
+        $(window).bind('resize', function (e) {
+            if (window.RT) clearTimeout(window.RT);
+            window.RT = setTimeout(function () {
+                this.location.reload(false); /* false to get page from cache */
+            }, 200);
+        });
+    </script>
     <script src="main.js"></script>
 </body>
 

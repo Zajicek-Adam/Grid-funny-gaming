@@ -2,9 +2,6 @@ let defaultsize = 150;
 let bg = document.getElementById("bg");
 let img = document.getElementById("img");
 let header = document.getElementById("h");
-window.onresize = function(){ setTimeout(function(){
-    window.location.reload();
-  }); }
 function handleMediaQuery(x){
     if(x.matches){
         isBigEnough = false;
