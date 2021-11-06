@@ -113,6 +113,9 @@ section > div{
   main > header{
     top: 70px;
   }
+  main header h2{
+    font-size: 3.5em;
+  }
   header > h1{
     font-size: 3.5em;
     text-align: center;
