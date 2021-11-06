@@ -110,6 +110,9 @@ section > div{
     align-items: center;
     flex-direction: column;
   }
+  main > header{
+    top: 70px;
+  }
   header > h1{
     font-size: 3.5em;
     text-align: center;
