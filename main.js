@@ -7,6 +7,6 @@ document.addEventListener("mousemove", function(e){
     let y = 100 + e.pageY/200;
     let move = (x + y)/2;
     bg.style.backgroundSize = move + '%';
-    img.style.right = 100 + e.pageX/2 + 'px';
-    header.style.left = 100 + e.pageX/2 + 'px';
+    img.style.right =  e.pageX/3 + 'px';
+    header.style.left = e.pageX/3 + 'px';
 })
