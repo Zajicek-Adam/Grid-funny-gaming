@@ -25,9 +25,6 @@ body {
   align-items: center;
   flex-direction: column;
 }
-body, main{
-  overflow: hidden;
-}
 main{
   height: 50%;
   width: 100%;
@@ -37,26 +34,36 @@ main{
   flex-flow: row wrap;
   background-image: url(img/Void_An_Unknowable_Power.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-attachment: fixed;
+  background-size: 150%;
+}
+section{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 main > img{
   margin: 2em;
+  height: 200px;
   border-radius: 100px;
   box-shadow: 0px 0px 100px 10px black;
   position: relative;
 }
 main h2,
-main h1 {
+main h1, section h1, section h2 {
   font-weight: var(--regular);
   text-transform: uppercase;
   text-shadow: 10px 10px 10px black;
 }
-main h1 {
+main h1, section h1 {
   color: #e9e5dd;
   font-size: 10em;
   margin-bottom: 0;
 }
-main h2 {
+main h2, section h2 {
   font-size: 5em;
   color: #dbcdb5;
   font-weight: var(--light);
@@ -64,4 +71,53 @@ main h2 {
 }
 header{
   position: relative;
+}
+section img{
+  width: 250px;
+  margin: 0 5em;
+  border-radius: 50%;
+}
+section > div{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#ldr{
+  filter: brightness(1.1) saturate(1.2) contrast(1.2);
+}
+#collector{
+  filter: brightness(0.6) saturate(0.6) sepia(0.3);
+}
+@media only screen and (max-width: 1300px){
+  header > h1{
+    font-size: 7em;
+  }
+  header > h2{
+    font-size: 3.5em;
+  }
+  main{
+    background-size: 300%;
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width : 1100px){
+  header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  header > h1{
+    font-size: 4em;
+    text-align: center;
+  }
+  header > h2{
+    font-size: 2em;
+    text-align: center;
+  }
+  section div{
+    flex-direction: column;
+  }
 }
