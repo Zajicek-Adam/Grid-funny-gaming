@@ -73,12 +73,7 @@ main > span > h3 {
   margin-top: 0;
 }
 
-.short::before {
-  width: 40px;
-}
-.long::before {
-  width: 65px;
-}
+
 section {
   width: 100%;
   height: 100%;
