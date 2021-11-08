@@ -1,0 +1,28 @@
+@import 'root.css';
+
+html > body{
+    justify-content: flex-start;
+}
+main, main > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+main {
+    width: 100%;
+    height: 50%; 
+  }
+header{
+    margin: 10em;
+}
+h1{
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: var(--light);
+}
+p{
+    font-weight: var(--light);
+    font-size: 1.5em;
+    max-width: 70%;
+}
